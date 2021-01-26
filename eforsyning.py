@@ -2,7 +2,7 @@ import requests
 import hashlib
 import json
 
-# Username and password is found on the incoice from the heating company
+# Username and password is found on the invoice from the heating company
 username="<username>"
 password="<password>"
 # The supplier ID is found on eforsyning.dk
