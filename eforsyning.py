@@ -25,7 +25,7 @@ serverurl="https://eforsyning.dk"
 asset_id="1"
 installation_id="1"
 # The API server is fetched by asking eforsyning where it is.
-api_server = "https://api2.dff-edb.dk/smoerum/"
+api_server = ""
 
 # Half-way internal variables.  You can put the crypt_id here to save an API call while playing
 # with the code. It seems the token is good for about an hour or so.
@@ -49,7 +49,7 @@ if api_server == "":
     result_dict = json.loads(result.text)
     # Got the API server, given the supplier ID.
     api_server = result_dict['AppServerUri']
-    #print(api_server)
+    print(f"API server     : {api_server}")
 
 if crypt_id == "":
     # With the API server URL we can authenticate and get a token:
